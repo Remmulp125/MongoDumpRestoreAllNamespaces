@@ -18,6 +18,7 @@
 # Running
 1. Export the source cluster connection string
 ```export $MONGODB_URI_DUMP=<source connection URI>```
+  - e.g. *mongodb+srv://username:password@cluster1.abcde.mongodb.net/* **This may vary based on the authentication method**
 
 1. Export the target cluster connection string
 ```export $MONGODB_URI_RESTORE=<target connection URI>```
