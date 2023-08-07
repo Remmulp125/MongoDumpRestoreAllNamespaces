@@ -18,7 +18,6 @@
 # Running
 1. Export the source cluster connection string
 ```export $MONGODB_URI_DUMP=<source connection URI>```
-  - e.g. *mongodb+srv://username:password@cluster1.abcde.mongodb.net/* **This may vary based on the authentication method**
 
 1. Export the target cluster connection string
 ```export $MONGODB_URI_RESTORE=<target connection URI>```
@@ -26,8 +25,12 @@
 1. From the location where the dump files will be stored, in your terminal copy and paste all of `executionCommand.sh` *or* make the `executionCommand.sh` executable and run the file.
 
 1. Monitor the output of the script for progress.
+
+1. Dump logs will be stored in `dumplogs.out` and Restore logs will be stored in `restorelogs.out` for future reference
+
 > [!NOTE]
-> Dump logs will be stored in `dumplogs.out` and Restore logs will be stored in `restorelogs.out` for future reference
+>   **This is an example URI but it may vary based on the authentication method used** 
+*mongodb+srv://username:password@cluster1.abcde.mongodb.net/* 
 
 > [!IMPORTANT]
 > Currently, the Mongo Restore command will not exit on failure when inserting documents e.g. `duplicate key error`. This can be changed, see [Mongo Restore Options](https://www.mongodb.com/docs/database-tools/mongorestore/#std-option-mongorestore.--stopOnError)
