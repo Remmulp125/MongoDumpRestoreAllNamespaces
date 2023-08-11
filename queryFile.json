@@ -1,1 +1,23 @@
-"$and":[{"$expr":{"$lt":["$Admission_date",{"$dateSubtract":{"startDate": "$$NOW","unit": "day","amount": 30}}]}},{"Admission_date":{"$exists": true}}]
+{
+    "$and": [
+        {
+            "$expr": {
+                "$lt": [
+                    "$Admission_date",
+                    {
+                        "$dateSubtract": {
+                            "startDate": "$$NOW",
+                            "unit": "day",
+                            "amount": 30
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Admission_date": {
+                "$exists": true
+            }
+        }
+    ]
+}
